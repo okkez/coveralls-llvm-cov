@@ -87,7 +87,7 @@ module Coveralls
             previous_line = 0
             (s1.line..s2.line).each do |line|
               if region_entries.empty?
-                coverage[line] = nil unless coverage.key?(line)
+                coverage[line] = nil unless coverage[line]
               else
                 if previous_line == s1.line
                   coverage[line] = s1.count unless coverage[line]
